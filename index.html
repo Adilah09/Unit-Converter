@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title> Unit Converter </title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+
+      <nav>
+        <div class="deep-orange lighten-2">
+        <a href="#" class="brand-logo" id="logo"> Unit Converter </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#main-section"> Home </a></li>
+          <li><a href="#pages-section"> Length Converter </a></li>
+        </ul>
+        </div>
+      </nav>
+
+      <div class="center-align" id="main-section">
+        <h1> Mathematics Unit Converter </h1>
+        <p id="paragraph">Lost about the conversion needed for the unit? This will help you a lot~</p>
+        <a class="waves-effect waves-light btn-large orange lighten-2" href="#pages-section"> Length </a>
+      </div>
+
+      <div class="container center-align" id="pages-section">
+        <h1> Length </h1>
+        <p id="paragraph"> Please enter a value to convert between length measurements. </p>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                <label> Millimetre (mm) </label>
+                <br/>
+                <input id="inputMm" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                <span class="helper-text"></span>
+              </div>
+              <div class="input-field col s4">
+                <label> Centimetre (cm) </label>
+                <br/>
+                <input id="inputCm" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                <span class="helper-text"></span>
+              </div>
+              <div class="input-field col s4">
+                <label> Metre (m) </label>
+                <br/>
+                <input id="inputMetre" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                <span class="helper-text"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <label> Kilometre (km) </label>
+                <br/>
+                <input id="inputKm" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                <span class="helper-text"></span>
+              </div>
+              <div class="input-field col s4">
+                <label> Inch (") </label>
+                <br/>
+                <input id="inputInch" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                <span class="helper-text"></span>
+              </div>
+              <div class="input-field col s4">
+                <label> Foot (ft) </label>
+                <br/>
+                <input id="inputFeet" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                <span class="helper-text"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <script src="main.js"></script>   
+    </body> 
+      
