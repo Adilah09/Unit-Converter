@@ -1,78 +1,125 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title> Unit Converter </title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+<html>
 
-    <body>
+<head>
+  <title> Unit Converter </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-      <nav>
-        <div class="deep-orange lighten-2">
-        <a href="#" class="brand-logo" id="logo"> Unit Converter </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#main-section"> Home </a></li>
-          <li><a href="#pages-section"> Length Converter </a></li>
-        </ul>
-        </div>
-      </nav>
+<body>
 
-      <div class="center-align" id="main-section">
-        <h1> Mathematics Unit Converter </h1>
-        <p id="paragraph">Lost about the conversion needed for the unit? This will help you a lot~</p>
-        <a class="waves-effect waves-light btn-large orange lighten-2" href="#pages-section"> Length </a>
-      </div>
+  <nav>
+    <div class="deep-orange lighten-2">
+      <a href="#" class="brand-logo" id="logo"> Unit Converter </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#main-section"> Home </a></li>
+        <li><a href="#length"> Length Converter </a></li>
+        <li><a href="#distance"> Distance </a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <div class="container center-align" id="pages-section">
-        <h1> Length </h1>
-        <p id="paragraph"> Please enter a value to convert between length measurements. </p>
+  <div class="center-align" id="main-section">
+    <h1> Mathematics Unit Converter </h1>
+    <p id="paragraph">Lost about the conversion needed for the unit? This will help you a lot~</p>
+    <a class="waves-effect waves-light btn-large orange lighten-2" href="#length"> Length </a>
+    <a class="waves-effect waves-light btn-large orange lighten-2" href="#distance"> Distance </a>
+  </div>
+
+  <div class="container center-align" id="length">
+    <h1> Length </h1>
+    <p id="paragraph"> Please enter a value to convert between length measurements. </p>
+    <div class="row">
+      <form class="col s12">
+
         <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s4">
-                <label> Millimetre (mm) </label>
-                <br/>
-                <input id="inputMm" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                <span class="helper-text"></span>
-              </div>
-              <div class="input-field col s4">
-                <label> Centimetre (cm) </label>
-                <br/>
-                <input id="inputCm" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                <span class="helper-text"></span>
-              </div>
-              <div class="input-field col s4">
-                <label> Metre (m) </label>
-                <br/>
-                <input id="inputMetre" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                <span class="helper-text"></span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s4">
-                <label> Kilometre (km) </label>
-                <br/>
-                <input id="inputKm" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                <span class="helper-text"></span>
-              </div>
-              <div class="input-field col s4">
-                <label> Inch (") </label>
-                <br/>
-                <input id="inputInch" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                <span class="helper-text"></span>
-              </div>
-              <div class="input-field col s4">
-                <label> Foot (ft) </label>
-                <br/>
-                <input id="inputFeet" type="number" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-                <span class="helper-text"></span>
-              </div>
-            </div>
-          </form>
+          <div class="input-field col s4">
+            <label> Millimetre (mm) </label>
+            <br />
+            <input id="inputMm" type="number" oninput="lengthConverter(this.id,this.value)"
+              onchange="lengthConverter(this.id,this.value)">
+            <span class="helper-text"></span>
+          </div>
+          <div class="input-field col s4">
+            <label> Centimetre (cm) </label>
+            <br />
+            <input id="inputCm" type="number" oninput="lengthConverter(this.id,this.value)"
+              onchange="lengthConverter(this.id,this.value)">
+            <span class="helper-text"></span>
+          </div>
+          <div class="input-field col s4">
+            <label> Metre (m) </label>
+            <br />
+            <input id="inputMetre" type="number" oninput="lengthConverter(this.id,this.value)"
+              onchange="lengthConverter(this.id,this.value)">
+            <span class="helper-text"></span>
+          </div>
         </div>
-      </div>
 
-      <script src="main.js"></script>   
-    </body> 
-      
+        <div class="row">
+          <div class="input-field col s4">
+            <label> Kilometre (km) </label>
+            <br />
+            <input id="inputKm" type="number" oninput="lengthConverter(this.id,this.value)"
+              onchange="lengthConverter(this.id,this.value)">
+            <span class="helper-text"></span>
+          </div>
+          <div class="input-field col s4">
+            <label> Inch (") </label>
+            <br />
+            <input id="inputInch" type="number" oninput="lengthConverter(this.id,this.value)"
+              onchange="lengthConverter(this.id,this.value)">
+            <span class="helper-text"></span>
+          </div>
+          <div class="input-field col s4">
+            <label> Foot (ft) </label>
+            <br />
+            <input id="inputFeet" type="number" oninput="lengthConverter(this.id,this.value)"
+              onchange="lengthConverter(this.id,this.value)">
+            <span class="helper-text"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container center-align" id="distance">
+      <h1> Distance </h1>
+      <p id="paragraph"> Can't solve the equation? Use this calculator to help you! </p>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s4 container">
+            <label> Speed (km/h) </label>
+            <br />
+            <input id="inputKmHr" type="number" >
+            <span class="helper-text"></span>
+          </div>
+
+          <div class="input-field col s4 container ">
+            <label> Time (hr) </label>
+            <br />
+            <input id="inputHr" type="number" >
+            <span class="helper-text"></span>
+          </div>
+          <br>
+          <a class="waves-effect waves-light btn-large indigo lighten-2" onclick="calculateDistance()">Calculate Distance</a>
+        </div>
+
+        <div class="row">
+          <div class="container">
+            <div class="card-panel indigo lighten-2">
+              <span class="white-text" id="cardContents">Your results will display here after you click the 'Calculate' button.</span>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+  <script src="main.js"></script>
+</body>
